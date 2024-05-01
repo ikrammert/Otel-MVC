@@ -11,7 +11,7 @@ using Otel_MVC.Models;
 namespace Otel_MVC.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240501152354_init")]
+    [Migration("20240501162231_init")]
     partial class init
     {
         /// <inheritdoc />

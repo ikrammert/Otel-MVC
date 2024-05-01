@@ -125,3 +125,4 @@ C:\Users\ikram\Desktop\Otel-MVC\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlit
 C:\Users\ikram\Desktop\Otel-MVC\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\ikram\Desktop\Otel-MVC\obj\Debug\net8.0\Otel-MVC.csproj.AssemblyReference.cache
 C:\Users\ikram\Desktop\Otel-MVC\obj\Debug\net8.0\Otel-MVC.csproj.Up2Date
+C:\Users\ikram\Desktop\Otel-MVC\obj\Debug\net8.0\Otel-MVC.sourcelink.json

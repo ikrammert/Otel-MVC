@@ -1,0 +1,84 @@
+@model Hotel
+
+<h1 class="display-4">
+    Hotel Details
+</h1>
+
+@if (Model != null)
+{
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">@Model.HotelName</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                @* <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+            </tr> *@
+                <tr>
+                    <td>Hotel ID</td>
+                    <td>@Model.HotelId</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input name="HotelName" value="@Model.HotelName"></td>
+                </tr>
+                <tr>
+                    <td>Number</td>
+                    <td><input name="HotelName" value="@Model.PhoneNumber"></td>
+                </tr>
+                <tr>
+                    <td>Star Count</td>
+                    <td><select asp-for="StarCount" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input name="HotelName" value="@Model.Adress"></td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td>@Model.HotelURL</td>
+                </tr>
+                <tr>
+                    <td>Active</td>
+                    <td><select asp-for="IsActive" class="form-control">
+                        <option value="@Model.IsActive">@true</option>
+                        <option value="@Model.IsActive">@false</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Deleted</td>
+                    <td>@Model.IsDeleted</td>
+                </tr>
+                <tr>
+                    <td>Created At</td>
+                    <td>@Model.CreateAt</td>
+                </tr>
+                <tr>
+                    <td>Last Modification Time</td>
+                    <td>@Model.LastModificationTime</td>
+                </tr>
+                <tr>
+                    <td>Deleted At</td>
+                    <td>@Model.DeletedAt</td>
+                </tr>
+            </table>
+        </div>
+        <div class="text-center">
+            <a asp-action="Index" class="btn btn-secondary">Back to Hotels</a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        Hotel not found.
+    </div>
+}
