@@ -1,0 +1,13 @@
+@model Hotel
+
+<div>
+    <h3 class="display-4">Congratulations @Model.HotelName </h3>
+    <p class="lead">Your Hotel has been <mark>added.</mark></p>
+    <hr />
+    <p class="text-muted">Your hotel created at @Model.CreateAt.</p>
+
+    <div class="btn-group">
+        <a class="btn btn-outline-success" asp-action="Index">Hotels</a>
+        <a class="btn btn-success" asp-action="Index" asp-controller="Home">Home</a>
+    </div>
+</div>
