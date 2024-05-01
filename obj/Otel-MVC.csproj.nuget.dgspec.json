@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ikram\\Desktop\\Otel-MVC\\Otel-MVC.csproj": {}
+    "C:\\Users\\ikrammert\\Documents\\GitHub\\Otel-MVC\\Otel-MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ikram\\Desktop\\Otel-MVC\\Otel-MVC.csproj": {
+    "C:\\Users\\ikrammert\\Documents\\GitHub\\Otel-MVC\\Otel-MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ikram\\Desktop\\Otel-MVC\\Otel-MVC.csproj",
+        "projectUniqueName": "C:\\Users\\ikrammert\\Documents\\GitHub\\Otel-MVC\\Otel-MVC.csproj",
         "projectName": "Otel-MVC",
-        "projectPath": "C:\\Users\\ikram\\Desktop\\Otel-MVC\\Otel-MVC.csproj",
-        "packagesPath": "C:\\Users\\ikram\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ikram\\Desktop\\Otel-MVC\\obj\\",
+        "projectPath": "C:\\Users\\ikrammert\\Documents\\GitHub\\Otel-MVC\\Otel-MVC.csproj",
+        "packagesPath": "C:\\Users\\ikrammert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ikrammert\\Documents\\GitHub\\Otel-MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ikram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ikrammert\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.neredekal.com/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

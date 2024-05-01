@@ -5,9 +5,9 @@ namespace Otel_MVC.Models
     public class Hotel
     {
         [Required]
-        public int HotelId { get; set;}
+        public int HotelId { get; set; }
         [Required(ErrorMessage = "Hotel name is required.")]
-        public String? HotelName { get; set; }
+        public String HotelName { get; set; }
         [Required]
         public String? PhoneNumber { get; set; } = String.Empty;
         [Required]
@@ -21,10 +21,11 @@ namespace Otel_MVC.Models
         public DateTime? DeletedAt { get; set; }
         public DateTime? LastModificationTime { get; set; }
 
-        public Hotel(){
+        public Hotel()
+        {
             CreateAt = DateTime.Now;
         }
 
-        
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Text;
+using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Mvc;
 using Otel_MVC.Models;
 
 namespace Otel_MVC.Controllers
@@ -31,6 +33,8 @@ namespace Otel_MVC.Controllers
             if (ModelState.IsValid)
             {
                 // model.CreateAt = DateTime.Now;
+                var slug = ToUrlSlug(model.HotelName);
+                model.HotelURL = "/" + slug;
                 _context.Hotels.Add(model);
                 _context.SaveChangesAsync();
                 return View("Feedback", model);
@@ -46,6 +50,16 @@ namespace Otel_MVC.Controllers
                 return NotFound();
             }
             return View(hotel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update([FromForm] Hotel model)
+        {
+            model.LastModificationTime = DateTime.Now;
+            _context.Hotels.Update(model);
+            _context.SaveChanges();
+            return RedirectToAction("Get", new { id = model.HotelId });
         }
 
         // [HttpPost]
@@ -68,5 +82,10 @@ namespace Otel_MVC.Controllers
         //         return RedirectToAction("Index");
         //     }
         // }
+        public static string ToUrlSlug(string value)
+        {
+            value = value.ToLower().Replace(" ", "-");
+            return value;
+        }
     }
 }
