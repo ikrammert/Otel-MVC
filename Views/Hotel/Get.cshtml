@@ -51,11 +51,11 @@
                     </tr>
                     <tr>
                         <td>Active</td>
-                        <td>@Model.IsActive<input type="checkbox" name="IsActive" /></td>
+                        <td>@Model.IsActive</td>
                     </tr>
                     <tr>
                         <td>Deleted</td>
-                        <td><input type="checkbox" asp-for="IsDeleted" value="@Model.IsDeleted" /></td>
+                        <td>@Model.IsDeleted</td>
                     </tr>
                     <tr>
                         <td>Created At</td>
@@ -76,6 +76,11 @@
                 <button class="btn btn-primary" type="submit">Save the changes</button>
             </div>
         </form>
+        <div>
+            <form method="post" asp-action="Delete" asp-route-hotelId="@Model.HotelId" class="mt-2">
+                <button type="submit" class="btn btn-danger">Delete Hotel</button>
+            </form>
+        </div>
     </div>
 }
 else

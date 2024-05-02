@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Otel_MVC.Models;
 
 namespace Otel_MVC.Controllers
@@ -60,6 +61,20 @@ namespace Otel_MVC.Controllers
             _context.Hotels.Update(model);
             _context.SaveChanges();
             return RedirectToAction("Get", new { id = model.HotelId });
+        }
+
+        [HttpPost("Delete/{hotelId}")]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int hotelId)
+        {
+            var hotel = _context.Hotels.FirstOrDefault(h => h.HotelId == hotelId);
+            if (hotel == null)
+            {
+                return NotFound();
+            }
+            _context.Hotels.Remove(hotel);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         // [HttpPost]
